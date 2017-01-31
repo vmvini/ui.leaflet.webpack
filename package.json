@@ -1,6 +1,6 @@
 {
   "name": "ui.leaflet.webpack",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Webpack version of ui-leaflet (https://github.com/angular-ui/ui-leaflet)",
   "main": "index.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/vmvini/ui.leaflet.webpack#readme",
   "dependencies": {
-    "leaflet.markercluster.webpack": "^1.0.1",
+    "leaflet.markercluster.webpack": "^1.0.2",
     "angular-simple-logger": "0.1.x"
   }
 }
