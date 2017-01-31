@@ -1,0 +1,33 @@
+{
+  "name": "ui.leaflet.webpack",
+  "version": "1.0.0",
+  "description": "Webpack version of ui-leaflet (https://github.com/angular-ui/ui-leaflet)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "maintainers": [
+    {
+      "name": "vmvini",
+      "email": "vmvini@hotmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmvini/ui.leaflet.webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "ui-leaflet"
+  ],
+  "author": "vmvini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vmvini/ui.leaflet.webpack/issues"
+  },
+  "homepage": "https://github.com/vmvini/ui.leaflet.webpack#readme",
+  "dependencies": {
+    "leaflet.markercluster.webpack": "^1.0.0",
+    "angular-simple-logger": "0.1.x"
+  }
+}
