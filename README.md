@@ -27,3 +27,20 @@ angular.module('example', ['ui-leaflet'])
             // L is the Leaflet global object. (Not global anymore :)
         });
 ```
+
+### Build Notes
+This module has some files written with ES6, so you need a babel loader to build.
+
+Install the babel-loader
+```bash
+npm install babel-loader babel-core babel-preset-es2015 webpack --save-dev
+```
+
+Add this loader into your webpack.config file
+```javascript
+{
+    test: /\.js$/,
+    exclude: /(node_modules(?!\/ui.leaflet.webpack)|bower_components)/,
+    loader: 'babel-loader?presets[]=es2015'
+},
+```

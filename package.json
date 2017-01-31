@@ -1,6 +1,6 @@
 {
   "name": "ui.leaflet.webpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Webpack version of ui-leaflet (https://github.com/angular-ui/ui-leaflet)",
   "main": "index.js",
   "scripts": {
