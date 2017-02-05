@@ -16,7 +16,7 @@
         replace: true,
         transclude: false,
         require: '^leaflet',
-        controller: function ($scope, $element, $sce) {
+        controller: ['$scope', '$element', '$sce', function ($scope, $element, $sce) {
             $log.debug('[Angular Directive - Layers] layers', $scope, $element);
             var safeApply = leafletHelpers.safeApply,
             isDefined = leafletHelpers.isDefined;
@@ -122,7 +122,7 @@
             } else {
                 L.DomEvent.on(div, 'click', L.DomEvent.stopPropagation);
             }
-        },
+        }],
         template:
         '<div class="angular-leaflet-control-layers" ng-show="overlaysArray.length">' +
             '<h4 ng-if="title">{{ title }}</h4>' +

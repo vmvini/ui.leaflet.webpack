@@ -9,12 +9,12 @@
         scope: false,
         replace: false,
         require: 'leaflet',
-        controller: function ($scope) {
+        controller: ['$scope',function ($scope) {
             $scope._leafletLayers = $q.defer();
             this.getLayers = function () {
                 return $scope._leafletLayers.promise;
             };
-        },
+        }],
         link: function(scope, element, attrs, controller){
             var isDefined = leafletHelpers.isDefined,
                 leafletLayers = {},

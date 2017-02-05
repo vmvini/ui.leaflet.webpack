@@ -27,7 +27,7 @@
         },
         transclude: true,
         template: '<div class="angular-leaflet-map"><div ng-transclude></div></div>',
-        controller: function ($scope) {
+        controller: ['$scope', function ($scope) {
             this._leafletMap = $q.defer();
             this.getMap = function () {
                 return this._leafletMap.promise;
@@ -36,7 +36,7 @@
             this.getLeafletScope = function() {
                 return $scope;
             };
-        },
+        }],
 
         link: function(scope, element, attrs, ctrl) {
             var isDefined = leafletHelpers.isDefined,
