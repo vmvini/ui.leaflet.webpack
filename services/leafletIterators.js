@@ -1,6 +1,6 @@
 angular.module('ui-leaflet').service('leafletIterators', 
 /** @ngInject */
-function (leafletLogger, leafletHelpers) {
+[ 'leafletLogger', 'leafletHelpers', function (leafletLogger, leafletHelpers) {
 
   var lHlp = leafletHelpers,
   errorHeader = leafletHelpers.errorHeader + 'leafletIterators: ';
@@ -167,4 +167,4 @@ function (leafletLogger, leafletHelpers) {
     every: _every,
     all: _all
   };
-});
+}]);

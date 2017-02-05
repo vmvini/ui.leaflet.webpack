@@ -1,7 +1,9 @@
 //angular.module('ui-leaflet', ['nemLogging']).directive('leaflet',
     
     /** @ngInject */
-    module.exports = function ($q, leafletData, leafletMapDefaults, leafletHelpers, leafletMapEvents, L) {
+    module.exports = [ 
+        '$q', 'leafletData', 'leafletMapDefaults', 'leafletHelpers', 'leafletMapEvents', 'L'
+        ,function ($q, leafletData, leafletMapDefaults, leafletHelpers, leafletMapEvents, L) {
     return {
         restrict: "EA",
         replace: true,
@@ -150,4 +152,4 @@
             });
         }
     };
-};
+    }];

@@ -1,7 +1,7 @@
 angular.module('ui-leaflet').service('leafletHelpers', 
 
 /** @ngInject */
-function ($q, $log, $timeout, L) {
+[ '$q', '$log', '$timeout', 'L',  function ($q, $log, $timeout, L) {
     var _errorHeader = '[ui-leaflet] ';
     var _copy = angular.copy;
     var _clone = _copy;
@@ -509,4 +509,4 @@ function ($q, $log, $timeout, L) {
             }
         }
     };
-});
+}]);

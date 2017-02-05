@@ -1,6 +1,6 @@
 angular.module('ui-leaflet').factory('leafletBoundsHelpers', 
 /** @ngInject */
-function (leafletLogger, leafletHelpers, L) {
+[ 'leafletLogger', 'leafletHelpers', 'L', function (leafletLogger, leafletHelpers, L) {
 
     var isArray = leafletHelpers.isArray,
         isNumber = leafletHelpers.isNumber,
@@ -68,4 +68,4 @@ function (leafletLogger, leafletHelpers, L) {
             };
         }
     };
-});
+}]);

@@ -1,6 +1,7 @@
 angular.module('ui-leaflet').factory('leafletControlHelpers', 
 
 /** @ngInject */
+[ '$rootScope', 'leafletLogger', 'leafletHelpers', 'leafletLayerHelpers', 'leafletMapDefaults', 'L', 
 function ($rootScope, leafletLogger, leafletHelpers, leafletLayerHelpers, leafletMapDefaults, L) {
     var isDefined = leafletHelpers.isDefined,
         isObject = leafletHelpers.isObject,
@@ -204,4 +205,4 @@ function ($rootScope, leafletLogger, leafletHelpers, leafletLayerHelpers, leafle
             delete _controls[mapId];
         }
     };
-});
+}]);

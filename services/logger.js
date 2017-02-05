@@ -1,5 +1,5 @@
 angular.module('ui-leaflet').service('leafletLogger', 
 /** @ngInject */
-function(nemSimpleLogger) {
+['nemSimpleLogger', function(nemSimpleLogger) {
   return nemSimpleLogger.spawn();
-});
+}]);

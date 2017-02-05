@@ -1,7 +1,7 @@
 angular.module('ui-leaflet')
 .service('leafletDirectiveControlsHelpers', 
 /** @ngInject */
-function (leafletLogger, leafletData, leafletHelpers) {
+[ 'leafletLogger', 'leafletData', 'leafletHelpers', function (leafletLogger, leafletData, leafletHelpers) {
     var _isDefined = leafletHelpers.isDefined,
         _isString = leafletHelpers.isString,
         _isObject = leafletHelpers.isObject,
@@ -43,4 +43,4 @@ function (leafletLogger, leafletData, leafletHelpers) {
     return {
         extend: extend
     };
-});
+}]);

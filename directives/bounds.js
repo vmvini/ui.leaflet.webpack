@@ -1,7 +1,9 @@
 //angular.module('ui-leaflet').directive('bounds', 
 
 /** @ngInject */
-module.exports = function (leafletLogger, $timeout, $http, leafletHelpers, nominatimService, leafletBoundsHelpers) {
+module.exports = ['leafletLogger', '$timeout', '$http', 'leafletHelpers', 'nominatimService', 'leafletBoundsHelpers',
+    
+    function (leafletLogger, $timeout, $http, leafletHelpers, nominatimService, leafletBoundsHelpers) {
     var $log = leafletLogger;
     return {
         restrict: "A",
@@ -81,4 +83,4 @@ module.exports = function (leafletLogger, $timeout, $http, leafletHelpers, nomin
             });
         }
     };
-};
+}];

@@ -1,6 +1,7 @@
 angular.module('ui-leaflet').factory('leafletPathsHelpers', 
 /** @ngInject */
-function ($rootScope, leafletLogger, leafletHelpers, L) {
+[ '$rootScope', 'leafletLogger', 'leafletHelpers', 'L', 
+ function ($rootScope, leafletLogger, leafletHelpers, L) {
     var isDefined = leafletHelpers.isDefined,
         isArray = leafletHelpers.isArray,
         isNumber = leafletHelpers.isNumber,
@@ -252,4 +253,4 @@ function ($rootScope, leafletLogger, leafletHelpers, L) {
             return pathTypes[path.type].createPath(options);
         }
     };
-});
+}]);

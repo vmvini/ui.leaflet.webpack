@@ -1,6 +1,8 @@
 //angular.module('ui-leaflet').directive('maxbounds', 
 /** @ngInject */
-module.exports = function (leafletLogger, leafletMapDefaults, leafletBoundsHelpers, leafletHelpers) {
+module.exports = [
+    'leafletLogger', 'leafletMapDefaults', 'leafletBoundsHelpers', 'leafletHelpers'
+    ,function (leafletLogger, leafletMapDefaults, leafletBoundsHelpers, leafletHelpers) {
     // var $log = leafletLogger;
     return {
         restrict: "A",
@@ -35,4 +37,4 @@ module.exports = function (leafletLogger, leafletMapDefaults, leafletBoundsHelpe
             });
         }
     };
-};
+}];

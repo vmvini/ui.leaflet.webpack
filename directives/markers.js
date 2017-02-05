@@ -1,6 +1,10 @@
 //angular.module('ui-leaflet').directive('markers',
     /** @ngInject */
-    module.exports = function (leafletLogger, $rootScope, $q, leafletData, leafletHelpers, leafletMapDefaults,
+    module.exports = [
+        'leafletLogger', '$rootScope', '$q', 'leafletData', 'leafletHelpers', 'leafletMapDefaults',
+              'leafletMarkersHelpers', 'leafletMarkerEvents', 'leafletIterators', 'leafletWatchHelpers',
+              'leafletDirectiveControlsHelpers', 'L'
+         ,function (leafletLogger, $rootScope, $q, leafletData, leafletHelpers, leafletMapDefaults,
               leafletMarkersHelpers, leafletMarkerEvents, leafletIterators, leafletWatchHelpers,
               leafletDirectiveControlsHelpers, L) {
     //less terse vars to helpers
@@ -277,4 +281,4 @@
             });
         }
     };
-};
+    }];

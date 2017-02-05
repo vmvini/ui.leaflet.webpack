@@ -1,5 +1,6 @@
 angular.module('ui-leaflet').factory('nominatimService', 
 /** @ngInject */
+['$q', '$http', 'leafletHelpers', 'leafletMapDefaults', 
 function ($q, $http, leafletHelpers, leafletMapDefaults) {
     var isDefined = leafletHelpers.isDefined;
 
@@ -20,4 +21,4 @@ function ($q, $http, leafletHelpers, leafletMapDefaults) {
             return df.promise;
         }
     };
-});
+}]);

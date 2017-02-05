@@ -1,7 +1,8 @@
 angular.module('ui-leaflet')
 .factory('leafletLayerHelpers', 
 /** @ngInject */
-function ($rootScope, $q, leafletLogger, leafletHelpers, leafletIterators, L) {
+[ '$rootScope', '$q', 'leafletLogger', 'leafletHelpers', 'leafletIterators', 'L',
+ function ($rootScope, $q, leafletLogger, leafletHelpers, leafletIterators, L) {
     var Helpers = leafletHelpers;
     var isString = leafletHelpers.isString;
     var isObject = leafletHelpers.isObject;
@@ -369,4 +370,4 @@ function ($rootScope, $q, leafletLogger, leafletHelpers, leafletIterators, L) {
         safeRemoveLayer: safeRemoveLayer,
         changeOpacityListener: changeOpacityListener
     };
-});
+}]);

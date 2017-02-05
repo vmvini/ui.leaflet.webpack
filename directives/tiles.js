@@ -1,6 +1,7 @@
 //angular.module('ui-leaflet').directive('tiles', 
 /** @ngInject */
-module.exports = function (leafletLogger, leafletData, leafletMapDefaults, leafletHelpers, L) {
+module.exports = ['leafletLogger', 'leafletData', 'leafletMapDefaults', 'leafletHelpers', 'L',
+ function (leafletLogger, leafletData, leafletMapDefaults, leafletHelpers, L) {
     var $log = leafletLogger;
     return {
         restrict: "A",
@@ -67,4 +68,4 @@ module.exports = function (leafletLogger, leafletData, leafletMapDefaults, leafl
             });
         }
     };
-};
+}];

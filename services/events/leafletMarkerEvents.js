@@ -1,7 +1,8 @@
 angular.module('ui-leaflet')
 .factory('leafletMarkerEvents', 
 /** @ngInject */
-function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpersFactory, leafletLabelEvents) {
+[  '$rootScope', '$q', 'leafletLogger', 'leafletHelpers', 'leafletEventsHelpersFactory', 'leafletLabelEvents'
+    ,function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpersFactory, leafletLabelEvents) {
     var safeApply = leafletHelpers.safeApply,
         isDefined = leafletHelpers.isDefined,
         Helpers = leafletHelpers,
@@ -68,4 +69,4 @@ function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpersFac
     };
 
     return new MarkerEvents();
-});
+}]);

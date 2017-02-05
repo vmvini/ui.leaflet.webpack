@@ -1,6 +1,8 @@
 //angular.module("ui-leaflet").directive('legend', 
     /** @ngInject */
-    module.exports = function (leafletLogger, $http, $timeout, leafletHelpers, leafletLegendHelpers, L) {
+    module.exports = [  
+        'leafletLogger', '$http', '$timeout', 'leafletHelpers', 'leafletLegendHelpers', 'L'
+        ,function (leafletLogger, $http, $timeout, leafletHelpers, leafletLegendHelpers, L) {
         var $log = leafletLogger,
             errorHeader = leafletHelpers.errorHeader + ' [Legend] ';
         return {
@@ -142,4 +144,4 @@
 
             }
         };
-    };
+    }];

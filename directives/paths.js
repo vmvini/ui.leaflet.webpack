@@ -1,6 +1,9 @@
 //angular.module('ui-leaflet').directive('paths', 
 /** @ngInject */
-module.exports = function (leafletLogger, $q, leafletData, leafletMapDefaults, leafletHelpers, leafletPathsHelpers, leafletPathEvents, leafletWatchHelpers, L ) {
+module.exports = [  
+    
+    'leafletLogger', '$q', 'leafletData', 'leafletMapDefaults', 'leafletHelpers', 'leafletPathsHelpers', 'leafletPathEvents', 'leafletWatchHelpers', 'L'
+    ,function (leafletLogger, $q, leafletData, leafletMapDefaults, leafletHelpers, leafletPathsHelpers, leafletPathEvents, leafletWatchHelpers, L ) {
     var $log = leafletLogger;
     return {
         restrict: "A",
@@ -172,4 +175,4 @@ module.exports = function (leafletLogger, $q, leafletData, leafletMapDefaults, l
             });
         }
     };
-};
+}];

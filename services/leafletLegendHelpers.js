@@ -1,6 +1,6 @@
 angular.module("ui-leaflet").factory('leafletLegendHelpers', 
 /** @ngInject */
-function ($http, $q, $log, leafletHelpers, L) {
+[ '$http', '$q', '$log', 'leafletHelpers', 'L', function ($http, $q, $log, leafletHelpers, L) {
 	var requestQueue = {},
 		isDefined = leafletHelpers.isDefined;
 
@@ -94,4 +94,4 @@ function ($http, $q, $log, leafletHelpers, L) {
 			return d.promise;
 		}
 	};
-});
+}]);

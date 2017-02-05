@@ -1,6 +1,7 @@
 angular.module('ui-leaflet').service('leafletMarkersHelpers', 
 /** @ngInject */
-function ($rootScope, $timeout, leafletHelpers, leafletLogger, $compile, leafletGeoJsonHelpers, leafletWatchHelpers, L) {
+[ '$rootScope', '$timeout', 'leafletHelpers', 'leafletLogger', '$compile', 'leafletGeoJsonHelpers', 'leafletWatchHelpers', 'L', 
+ function ($rootScope, $timeout, leafletHelpers, leafletLogger, $compile, leafletGeoJsonHelpers, leafletWatchHelpers, L) {
     var isDefined = leafletHelpers.isDefined,
         defaultTo = leafletHelpers.defaultTo,
         MarkerClusterPlugin = leafletHelpers.MarkerClusterPlugin,
@@ -595,4 +596,4 @@ function ($rootScope, $timeout, leafletHelpers, leafletLogger, $compile, leaflet
         getModelFromModels : _getModelFromModels,
         getLayerModels : _getLayerModels
     };
-});
+}]);

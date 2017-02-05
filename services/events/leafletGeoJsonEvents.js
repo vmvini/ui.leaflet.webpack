@@ -1,7 +1,8 @@
 angular.module('ui-leaflet')
 .factory('leafletGeoJsonEvents', 
 /** @ngInject */
-function ($rootScope, $q, leafletLogger, leafletHelpers,
+['$rootScope', '$q', 'leafletLogger', 'leafletHelpers',
+  'leafletEventsHelpersFactory', 'leafletData',function ($rootScope, $q, leafletLogger, leafletHelpers,
   leafletEventsHelpersFactory, leafletData) {
     var safeApply = leafletHelpers.safeApply,
         EventsHelper = leafletEventsHelpersFactory;
@@ -45,4 +46,4 @@ function ($rootScope, $q, leafletLogger, leafletHelpers,
     };
 
     return new GeoJsonEvents();
-});
+}]);

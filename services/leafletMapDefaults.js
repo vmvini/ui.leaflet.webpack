@@ -1,6 +1,6 @@
 angular.module('ui-leaflet').factory('leafletMapDefaults', 
 /** @ngInject */
-function ($q, leafletHelpers, L) {
+['$q', 'leafletHelpers', 'L',  function ($q, leafletHelpers, L) {
     function _getDefaults() {
         return {
             keyboard: true,
@@ -175,4 +175,4 @@ function ($q, leafletHelpers, L) {
             return newDefaults;
         }
     };
-});
+}]);

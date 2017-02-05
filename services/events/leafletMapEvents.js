@@ -1,7 +1,8 @@
 angular.module('ui-leaflet')
 .factory('leafletMapEvents', 
 /** @ngInject */
-function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpers, leafletIterators) {
+['$rootScope', '$q', 'leafletLogger', 'leafletHelpers', 'leafletEventsHelpers', 'leafletIterators'
+    ,function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpers, leafletIterators) {
     var isDefined = leafletHelpers.isDefined,
         fire = leafletEventsHelpers.fire;
 
@@ -102,4 +103,4 @@ function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpers, l
         notifyCenterUrlHashChanged: _notifyCenterUrlHashChanged,
         addEvents: _addEvents
     };
-});
+}]);

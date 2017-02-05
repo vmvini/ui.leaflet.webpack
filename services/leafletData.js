@@ -1,6 +1,6 @@
 angular.module('ui-leaflet').service('leafletData', 
 /** @ngInject */
-function (leafletLogger, $q, leafletHelpers) {
+[ 'leafletLogger', '$q', 'leafletHelpers', function (leafletLogger, $q, leafletHelpers) {
     var getDefer = leafletHelpers.getDefer,
         getUnresolvedDefer = leafletHelpers.getUnresolvedDefer,
         setResolvedDefer = leafletHelpers.setResolvedDefer;
@@ -50,4 +50,4 @@ function (leafletLogger, $q, leafletHelpers) {
             return defer.promise;
         };
     });
-});
+}]);

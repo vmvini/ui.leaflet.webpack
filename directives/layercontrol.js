@@ -1,6 +1,7 @@
 //angular.module('ui-leaflet').directive('layercontrol', 
     /** @ngInject */
-    module.exports = function ($filter, leafletLogger, leafletData, leafletHelpers, L) {
+    module.exports = ['$filter', 'leafletLogger', 'leafletData', 'leafletHelpers', 'L',
+     function ($filter, leafletLogger, leafletData, leafletHelpers, L) {
     var $log = leafletLogger;
     return {
         restrict: "E",
@@ -265,4 +266,4 @@
             });
         }
     };
-};
+    }];

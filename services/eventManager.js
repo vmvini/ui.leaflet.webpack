@@ -92,7 +92,7 @@
             }])
         .service('eventManager', 
         /** @ngInject */
-        function(EventManager){
+        ['EventManager', function(EventManager){
             return new EventManager();
-        });
+        }]);
 })();

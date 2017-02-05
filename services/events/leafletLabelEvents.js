@@ -1,6 +1,7 @@
 angular.module('ui-leaflet')
 .factory('leafletLabelEvents', 
 /** @ngInject */
+[ '$rootScope', '$q', 'leafletLogger', 'leafletHelpers', 'leafletEventsHelpersFactory', 
 function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpersFactory) {
     var Helpers = leafletHelpers,
         EventsHelper = leafletEventsHelpersFactory;
@@ -41,4 +42,4 @@ function ($rootScope, $q, leafletLogger, leafletHelpers, leafletEventsHelpersFac
         LabelEvents.prototype.bindEvents = function (maybeMapId, lObject, name, model, leafletScope, layerName) {};
 
         return new LabelEvents();
-});
+}]);

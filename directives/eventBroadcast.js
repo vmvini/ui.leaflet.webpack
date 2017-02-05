@@ -1,6 +1,7 @@
 //angular.module('ui-leaflet').directive('eventBroadcast', 
     /** @ngInject */
-    module.exports = function (leafletLogger, $rootScope, leafletHelpers, leafletMapEvents, leafletIterators) {
+    module.exports = [ 'leafletLogger', '$rootScope', 'leafletHelpers', 'leafletMapEvents', 'leafletIterators',
+    function (leafletLogger, $rootScope, leafletHelpers, leafletMapEvents, leafletIterators) {
     var $log = leafletLogger;
     return {
         restrict: "A",
@@ -57,4 +58,4 @@
             });
         }
     };
-};
+    }];

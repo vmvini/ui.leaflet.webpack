@@ -1,6 +1,7 @@
 angular.module('ui-leaflet')
 .factory('leafletPathEvents', 
 /** @ngInject */
+[ '$rootScope', '$q', 'leafletLogger', 'leafletHelpers', 'leafletLabelEvents', 'leafletEventsHelpers', 
 function ($rootScope, $q, leafletLogger, leafletHelpers, leafletLabelEvents, leafletEventsHelpers) {
     var isDefined = leafletHelpers.isDefined,
         isObject = leafletHelpers.isObject,
@@ -146,4 +147,4 @@ function ($rootScope, $q, leafletLogger, leafletHelpers, leafletLabelEvents, lea
         getAvailablePathEvents: _getAvailablePathEvents,
         bindPathEvents: _bindPathEvents
     };
-});
+}]);

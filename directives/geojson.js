@@ -1,7 +1,10 @@
 //angular.module('ui-leaflet')
 //.directive('geojson', 
     /** @ngInject */
-    module.exports = function ($timeout, leafletLogger, leafletData, leafletHelpers,
+    module.exports = [ 
+        '$timeout', 'leafletLogger', 'leafletData', 'leafletHelpers',
+    'leafletWatchHelpers', 'leafletDirectiveControlsHelpers','leafletIterators', 'leafletGeoJsonEvents', 'L'
+        ,function ($timeout, leafletLogger, leafletData, leafletHelpers,
     leafletWatchHelpers, leafletDirectiveControlsHelpers,leafletIterators, leafletGeoJsonEvents, L) {
     var _maybeWatch = leafletWatchHelpers.maybeWatch,
         _defaultWatchOptions = leafletHelpers.watchOptions,
@@ -132,4 +135,4 @@
             });
         }
     };
-};
+    }];

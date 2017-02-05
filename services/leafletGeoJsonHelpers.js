@@ -1,7 +1,7 @@
 angular.module('ui-leaflet')
 .service('leafletGeoJsonHelpers', 
 /** @ngInject */
-function (leafletHelpers, leafletIterators) {
+[ 'leafletHelpers', 'leafletIterators', function (leafletHelpers, leafletIterators) {
     var lHlp = leafletHelpers,
     lIt = leafletIterators;
     var Point = function(lat,lng){
@@ -77,4 +77,4 @@ function (leafletHelpers, leafletIterators) {
             validateCoords: _validateCoords,
             getCoords: _getCoords
         };
-    });
+}]);
