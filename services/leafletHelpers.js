@@ -1,4 +1,4 @@
-angular.module('ui-leaflet').service('leafletHelpers', 
+angular.module('ui-leaflet').service('leafletHelpers',
 
 /** @ngInject */
 [ '$q', '$log', '$timeout', 'L',  function ($q, $log, $timeout, L) {
@@ -145,8 +145,8 @@ angular.module('ui-leaflet').service('leafletHelpers',
             throw new Error(_errorHeader + 'trapField is undefined');
 
         trapObj[trapField] = true;
-        let ret = cbToExec();
-        $timeout(()=> {
+        var ret = cbToExec();
+        $timeout(function() {
             trapObj[trapField] = false;
         }, _watchTrapDelayMilliSec);
         return ret;
