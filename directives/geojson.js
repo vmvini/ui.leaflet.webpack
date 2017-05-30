@@ -1,7 +1,7 @@
 //angular.module('ui-leaflet')
-//.directive('geojson', 
+//.directive('geojson',
     /** @ngInject */
-    module.exports = [ 
+    module.exports = [
         '$timeout', 'leafletLogger', 'leafletData', 'leafletHelpers',
     'leafletWatchHelpers', 'leafletDirectiveControlsHelpers','leafletIterators', 'leafletGeoJsonEvents', 'L'
         ,function ($timeout, leafletLogger, leafletData, leafletHelpers,
@@ -83,7 +83,7 @@
                     var onEachFeature = _hookUpEvents(geojson, maybeName);
 
                     if (!isDefined(geojson.options)) {
-                        hlp.modelChangeInDirective(watchTrap, "changeFromDirective", () => {
+                        hlp.modelChangeInDirective(watchTrap, "changeFromDirective", function() {
                             geojson.options = {
                                 style: geojson.style,
                                 filter: geojson.filter,

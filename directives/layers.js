@@ -1,6 +1,6 @@
-//angular.module('ui-leaflet').directive('layers', 
+//angular.module('ui-leaflet').directive('layers',
     /** @ngInject */
-    module.exports = [ 
+    module.exports = [
         'leafletLogger', '$q', 'leafletData', 'leafletHelpers', 'leafletLayerHelpers', 'leafletControlHelpers'
         ,function (leafletLogger, $q, leafletData, leafletHelpers, leafletLayerHelpers, leafletControlHelpers) {
     // var $log = leafletLogger;
@@ -191,7 +191,7 @@
                             }
 
                             // check for the .layerOptions.opacity property has changed.
-                            let ly = leafletLayers.overlays[newName];
+                            var ly = leafletLayers.overlays[newName];
                             if(map.hasLayer(leafletLayers.overlays[newName])) {
                                 if (newOverlayLayers[newName].layerOptions.opacity !== oldOverlayLayers[newName].layerOptions.opacity) {
 

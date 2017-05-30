@@ -84,7 +84,7 @@
     //TODO: move to leafletMarkersHelpers??? or make a new class/function file (leafletMarkersHelpers is large already)
     var _addMarkers = function(mapId, markersToRender, oldModels, map, layers, leafletMarkers, leafletScope,
                                watchOptions, maybeLayerName, skips){
-        $it.each(markersToRender, (model, newName) => {
+        $it.each(markersToRender, function(model, newName) {
             if(skips[newName])
                 return;
 
@@ -95,7 +95,7 @@
 
             var pathToMarker = Helpers.getObjectDotPath(maybeLayerName? [maybeLayerName, newName]: [newName]);
             var maybeLMarker = _getLMarker(leafletMarkers,newName, maybeLayerName);
-            Helpers.modelChangeInDirective(watchTrap, "changeFromDirective", () => {
+            Helpers.modelChangeInDirective(watchTrap, "changeFromDirective", function() {
                 if (!isDefined(maybeLMarker)) {
 
                     var marker = createMarker(model);

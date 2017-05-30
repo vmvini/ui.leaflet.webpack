@@ -1,5 +1,5 @@
 angular.module('ui-leaflet')
-.factory('leafletLayerHelpers', 
+.factory('leafletLayerHelpers',
 /** @ngInject */
 [ '$rootScope', '$q', 'leafletLogger', 'leafletHelpers', 'leafletIterators', 'L',
  function ($rootScope, $q, leafletLogger, leafletHelpers, leafletIterators, L) {
@@ -355,8 +355,8 @@ angular.module('ui-leaflet')
         }
     }
 
-    let changeOpacityListener = (op) => {
-        return (ly) => {
+    var changeOpacityListener = function(op) {
+        return function(ly) {
             if(isDefined(ly.setOpacity)) {
                 ly.setOpacity(op);
             }
